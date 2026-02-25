@@ -1032,3 +1032,194 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.diagnosis-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1.5px solid #d0dff5;
+  box-shadow: 0 4px 20px rgba(30, 60, 120, 0.08);
+  padding: 28px 32px;
+  margin: 20px 0;
+
+  .diagnosis-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    border-bottom: 1.5px solid #e8f0fb;
+    padding-bottom: 16px;
+
+    .diagnosis-icon {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a3a6b;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  .diagnosis-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .diagnosis-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #7a95b8;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .diagnosis-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a3a6b;
+    background: #f0f5ff;
+    border: 1.5px solid #c5d8f5;
+    border-radius: 8px;
+    padding: 10px 16px;
+    display: inline-block;
+  }
+
+  .confidence-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .confidence-bar {
+      flex: 1;
+      height: 10px;
+      background: #e8f0fb;
+      border-radius: 999px;
+      overflow: hidden;
+
+      .confidence-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #3b6fd4, #1a3a6b);
+        border-radius: 999px;
+        transition: width 0.6s ease;
+      }
+    }
+
+    .confidence-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a3a6b;
+      min-width: 52px;
+      text-align: right;
+    }
+  }
+}
+
+.result-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.result-header h2 {
+  font-size: 1.2rem;
+  color: #1a3a6b;
+  font-weight: 700;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7a99;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.diagnosis-box {
+  background: #eef2fb;
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #1a3a6b;
+  margin-bottom: 20px;
+}
+
+.confidence-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 6px;
+  background: #e0e7f3;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #1a3a6b;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.confidence-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a3a6b;
+  min-width: 48px;
+  text-align: right;
+}
+
+/* Hide the ugly default input completely */
+.hidden-file-input {
+  display: none;
+}
+
+/* Style the label to look like a modern button */
+.modern-blue-upload {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #2563eb; /* Modern vibrant blue */
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.modern-blue-upload:hover {
+  background-color: #1d4ed8; /* Slightly darker blue */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.3);
+}
+
+/* Click effect */
+.modern-blue-upload:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px -1px rgba(37, 99, 235, 0.2);
+}
